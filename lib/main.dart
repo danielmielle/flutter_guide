@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_guide/quiz_app/quiz_app_main.dart';
 import 'package:flutter_guide/roll_dice/roll_dice_main.dart';
 import 'package:flutter_guide/routes/module_tiles.dart';
 
@@ -19,6 +20,7 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   final List<String> items = [
     'Roll Dice',
+    'Quiz App',
   ];
 
   // Every custom widget must have a build() method
@@ -75,7 +77,12 @@ void navigateToModulePage(BuildContext context, String item) {
       context,
       CupertinoPageRoute(builder: (context) => const RollDice()),
     );
-  } else {
+  } else if (item == 'Quiz App') {
+    Navigator.push(
+      context,
+      CupertinoPageRoute(builder: (context) => const QuizApp()),
+    );
+  }else {
     Navigator.pushNamed(context, Modules.routeName, arguments: item);
   }
 }

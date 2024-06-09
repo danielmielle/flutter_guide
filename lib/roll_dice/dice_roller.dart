@@ -2,7 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_guide/roll_dice/styled_text.dart';
+import 'package:flutter_guide/common/styled_text.dart';
 
 final randomizer = Random();
 
