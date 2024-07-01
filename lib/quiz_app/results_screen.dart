@@ -34,32 +34,29 @@ class ResultsScreen extends StatelessWidget {
       return data['user_answer'] == data['correct_answer'];
     }).length;
 
-    return SizedBox(
-      width: double.infinity,
-      child: Container(
-        margin: const EdgeInsets.all(40),
-        child: Column(
-          children: [
-            Text(
-              'You answered $numCorrectQuestions out of $numberTotalQuestions questions correctly.',
+    return Container(
+      margin: const EdgeInsets.all(40),
+      child: Column(
+        children: [
+          Text(
+            'You answered $numCorrectQuestions out of $numberTotalQuestions questions correctly.',
+            style: GoogleFonts.acme(
+              fontSize: 20,
+            ),
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 30),
+          QuestionsSummary(summaryData: summaryData),
+          TextButton(
+            onPressed: restartQuiz,
+            child: Text(
+              'Restart Quiz',
               style: GoogleFonts.acme(
-                fontSize: 20,
-              ),
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(height: 30),
-            QuestionsSummary(summaryData: summaryData),
-            TextButton(
-              onPressed: restartQuiz,
-              child: Text(
-                'Restart Quiz',
-                style: GoogleFonts.acme(
-                  color: Colors.white,
-                ),
+                color: Colors.white,
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
