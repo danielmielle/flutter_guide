@@ -4,9 +4,9 @@ class StyledText extends StatelessWidget {
   const StyledText(this.text, this.fontSize, this.fontWeight, this.color, {super.key});
 
   final String text;
-  final double fontSize;
-  final FontWeight fontWeight;
-  final Color color;
+  final double? fontSize;
+  final FontWeight? fontWeight;
+  final Color? color;
 
   @override
   Widget build(context) {

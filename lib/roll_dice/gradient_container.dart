@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_guide/roll_dice/dice_roller.dart';
-import 'package:flutter_guide/roll_dice/styled_text.dart';
 
 const beginAlignment = Alignment.topCenter;
 const endAlignment = Alignment.bottomCenter;
@@ -14,8 +13,6 @@ class GradientContainer extends StatelessWidget {
 
   final Color color1;
   final Color color2;
-
-
 
   @override
   Widget build(context) {
